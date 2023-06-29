@@ -1,12 +1,13 @@
 import expect.expect
 import formatter.format
+import kommander.expect
 import kotlin.test.Test
 
 class NumberFormatTest {
 
     @Test
     fun should_easily_abbreviate_hundreds_of_thousands() {
-        expect(450_000.format(abbreviate = true)).toBe("450K")
+        expect<String>(450_000.format(abbreviate = true)).toBe("450K")
     }
 
     @Test
